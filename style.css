@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+body {
+    font-family: Poppins;
+    margin: 0;
+    font-size: 0.813rem;
+    background-color: #23282E;
+    color: #eee;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    text-align: center;
+    margin-top: 0.625rem;
+}
+
+header nav a {
+    color: #eee;
+    font-size: small;
+    margin: 0 1.875rem;
+}
+
+.tab {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url();
+    background-size: 50%;
+}
+
+.tab .container {
+    width: 71.25rem;
+    max-width: 100%;
+    height: 100%;
+    padding-top: 3.125rem;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+
+}
+
+/*Intro*/
+
+#intro {
+    background-color: #48485b;
+}
+
+#intro .avatar {
+    align-content: right;
+    text-align: right;
+    height: 100%;
+}
+
+#intro .avatar img {
+    height: 75%;
+    width: 60%;
+    margin: 17rem 0 17rem 35rem;
+    padding: 5rem;
+    filter: saturate(0.7);
+}
+
+#intro .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5.125rem;
+    width: 50rem;
+    max-width: 80%;
+}
+
+#intro .content .name,
+#intro .content .job {
+    font-size: 4rem;
+    font-family: Righteous;
+    line-height: 3.25rem;
+}
+
+.text-gradient {
+    background-image: linear-gradient(to right, #75c8cb, #085f62);
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+}
+
+#intro .content .des {
+    margin-top: 1.5rem;
+    width: 75%;
+}
+
+#intro .content a {
+    margin-top: 1.5rem;
+}
+
+#intro .content i {
+    font-size: 10rem;
+    color: #086571;
+    position: absolute;
+    top: -2.75rem;
+    right: -6.5rem;
+
+}
+
+/* exp */
+#experience {
+    background-image: linear-gradient(45deg, #004603, #0b6675, #050a56);
+    background-size: cover;
+}
+
+#experience .container .list {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-content: left;
+    padding: 3.125rem;
+    box-sizing: border-box;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+#experience .container .list .item {
+    width: 12.5rem;
+    flex-shrink: 0;
+    display: grid;
+    grid-template-rows: 1fr 3.125rem 1fr;
+    gap: 1.25rem;
+}
+
+#experience .container .list .item i {
+    background-color: #7e0089;
+    width: 3.125rem;
+    font-size: 2rem;
+    color: #a8a8a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#experience .list .item .time {
+    font-size: large;
+    display: flex;
+    align-items: end;
+}
+
+#experience .list .item .job {
+    font-size: large;
+}
+
+#experience .list .item .company {
+    color: #E4454A;
+}
+
+#experience .list .item .des {
+    font-size: .8rem;
+    opacity: 0.7;
+}
+
+#experience .list .item:nth-child(odd) .content {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#experience .list .item:nth-child(odd) .time {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-items: start;
+    display: flex;
+}
+
+#experience .list::before {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 0.125rem;
+    background-color: #1b575e;
+    content: '';
+    z-index: -1;
+}
+
+#experience .container {
+    overflow: auto;
+}
+
+/*Skills*/
+
+#skill {
+    background-image: linear-gradient(45deg, #fa0081, #171514, #2d0053);
+    background-size: cover;
+    overflow: auto;
+}
+
+#skill .list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-sizing: border-box;
+    gap: 0;
+}
+
+#skill .list .item {
+    width: 25rem;
+    height: 25rem;
+    align-content: center;
+}
+
+#skill .list .item:nth-child(odd) {
+    background-color: #0e103d;
+}
+
+#skill .list .item .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.item:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+#skill .list .item .front {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+#skill .list .item .back {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+
+#skill .list .item .front #icon {
+    width: 10rem;
+    height: 10rem;
+    background-color: #eee;
+    color: #4916c1;
+    font-size: 6rem;
+    border-radius: 0.313rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 2rem 2rem #0005;
+}
+
+#skill .list .item .front svg {
+    width: 10rem;
+    height: 10rem;
+    background-color: #eee;
+    color: #4916c1;
+    font-size: 5rem;
+    border-radius: 0.313rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.625rem 0.625rem #0005;
+}
+
+#skill .list .item .front .name {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+}
+
+#skill .list .back .des {
+    padding: 2rem;
+    font-size: small;
+    opacity: 0.8;
+}
+
+#skill .list .item .front .stars {
+    width: 3.125rem;
+    height: 3.125rem;
+    color: #4916c1;
+    display: inline;
+    font-size: 2rem;
+}
+
+/* Projects */
+
+#project {
+    background-color: #315c56;
+    color: #444B57;
+}
+
+#project .container .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+    padding: 3.125rem;
+}
+
+#project .list .item img {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+}
+
+#project .list .item {
+    border-radius: 1.875rem;
+    background-color: #FFF;
+    overflow: hidden;
+    position: relative;
+}
+
+#project .list .item .index {
+    font-weight: bold;
+    font-size: 1.5rem;
+    position: absolute;
+    transform: translateY(-100%);
+    background-color: #FFF;
+    padding: 0.625rem;
+    font-style: italic;
+    border-top-right-radius: 1.25rem;
+}
+
+#project .list .name {
+    font-weight: bold;
+    font-size: large;
+    padding: 0.625rem;
+}
+
+#project .list .item .des {
+    padding: 0 0.625rem 0.625rem 0.625rem;
+    font-size: small;
+}
+
+#project .list .item .author {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.625rem;
+    border-top: 0.1rem solid #EEE;
+}
+
+#project .list .item .job {
+    font-weight: bold;
+}
+
+#project .container {
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* contact */
+
+#contact {
+    background-color: #4f203a;
+}
+
+#contact .thank {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem;
+}
+
+#contact .des {
+    width: 31.25rem;
+    max-width: 80%;
+    text-align: center;
+}
+
+#contact .des a {
+    font-weight: bold;
+    font-size: medium;
+    color: #75c8cb;
+}
+
+#contact .list {
+    text-align: center;
+
+}
+
+#contact .list .item {
+    display: inline-block;
+    margin: 0.625rem 1.875rem;
+}
+
+@media screen and (max-width: 61.938rem) {
+    #intro .avatar img {
+        transform: translateX(-8rem);
+        height: 50%;
+        width: 50%;
+        margin-top: 20.5rem;
+    }
+
+    #skill .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 2.5rem;
+        box-sizing: border-box;
+        gap: 0;
+    }
+
+    #skill .list .item:nth-child(odd) {
+        background-color: unset;
+    }
+
+
+    #skill .list .item:nth-child(2),
+    #skill .list .item:nth-child(3n) {
+        background-color: #0e103d;
+    }
+
+    #project .container .list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.875rem;
+        padding: 3.125rem;
+    }
+}
+
+
+@media screen and (max-width: 741px) {
+    body {
+        font-size: 0.625rem;
+    }
+
+    header nav a {
+        margin: 0.625rem;
+    }
+
+    #intro .avatar img {
+        transform: none;
+    }
+
+    #intro .content {
+        margin-top: 2rem;
+        left: 1.25rem;
+        max-width: 90%;
+    }
+
+    #intro .avatar img {
+        transform: translateX(-25.6rem);
+        height: 50%;
+        width: 50%;
+        margin-top: 20.5rem;
+    }
+
+    #intro .content i {
+        font-size: 5rem;
+        position: unset;
+
+    }
+
+    #intro .content .job,
+    #intro .content .name {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    #skill .list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 2.5rem;
+        box-sizing: border-box;
+        gap: 2.5rem;
+    }
+
+    #skill .list .item:nth-child(odd) {
+        background-color: #0e103d;
+    }
+
+    #skill .list .item:nth-child(even) {
+        background-color: transparent;
+    }
+
+    #project .container .list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.875rem;
+        padding: 3.125rem;
+    }
+}
+
+.tab {
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 1;
+}
+
+#intro {
+    z-index: 2;
+}
+
+.active {
+    --x: 50%;
+    --y: 50%;
+    clip-path: circle(0 at var(--x) var(--y));
+    animation: showTab 1s ease-in-out 1 forwards;
+}
+
+@keyframes showTab {
+    to {
+        clip-path: circle(200% at var(--x) var(--y));
+    }
+
+}
